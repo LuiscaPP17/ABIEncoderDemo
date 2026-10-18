@@ -5,10 +5,10 @@ pragma solidity 0.8.24;
 /**
  * @title ABIEncoderDemo
  * @author Luis Pinto
- * @dev This smart contract shows different uses of abi.encodePacked in DiFi prtocols
+ * @dev This smart contract shows different uses of abi.encodePacked in DeFi protocols
  */
 contract ABIEncoderDemo {
-    // Events to show th codification
+    // Events to show the codification
     event DataEncode(bytes32 indexed hash, bytes encodedData);
     event PoolIdentifierCreated(bytes32 indexed poolId, address token, uint256 rate);
     event UserPositionEncoded(bytes32 indexed positionId, address user, uint256 amount);
@@ -92,7 +92,7 @@ contract ABIEncoderDemo {
      * @param amountOut Output amount
      * @param nonce Unique nonce
      * @return orderHash Order hash
-     * @return orderData  Encoded order data
+     * @return orderData Encoded order data
      */
     function encodeLimitOrder(
         address maker,
@@ -113,7 +113,7 @@ contract ABIEncoderDemo {
     /**
      * @dev Encodes data for a yield farming position
      * @param user User address
-     * @param poolId Pool identifer
+     * @param poolId Pool identifier
      * @param amount Staked amount
      * @param startTime Start time
      * @return positionId Position identifier
